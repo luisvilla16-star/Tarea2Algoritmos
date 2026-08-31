@@ -1,0 +1,25 @@
+@startuml
+
+class Pila<T> {
+    - T[] pila
+    - int tope
+
+    + Pila()
+    + Pila(int capacidad)
+    + boolean Push(T dato)
+    + T Pop()
+    + boolean llena()
+    + boolean vacia()
+}
+
+class PruebaPila {
+    - Pila<Character> pila
+
+    + String invierteCadena(String s)
+    + boolean revisarSintaxis(String cadena)
+    + Pila<Integer> ordenarVector(int[] vector)
+}
+
+PruebaPila --> Pila
+
+@enduml
